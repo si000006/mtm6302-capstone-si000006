@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone Project Part 1</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <p>Welcome to Branch One</p>
-    
+  <header>
+    <div class="header-left">
+      <h1>Quick Quiz</h1>
+    </div>
+    <div class="header-right">
+      <label for="language-select">Language:</label>
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+  </header>
+
+<main class="container">
+  <section id="welcome-screen">
+    <h2>Welcome to the Quiz!</h2>
+    <div id="difficulty-buttons">
+      <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+      <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+      <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+    </div>
+  </section>
+
+  <section id="quiz-screen" class="hidden">
+    <div class="scoreboard">
+      <span>Correct: <span id="correct-count">0</span></span>
+      <span>Incorrect: <span id="incorrect-count">0</span></span>
+    </div>
+
+    <div id="question-section">
+      <div id="question-text"></div>
+      <form id="answer-form"></form>
+    </div>
+
+    <div id="result-message" class="hidden"></div>
+  </section>
+</main>
+
+
+
+  <footer>
+    <button id="reset-btn">Restart</button>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
